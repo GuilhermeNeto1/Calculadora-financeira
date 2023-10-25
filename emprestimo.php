@@ -11,7 +11,7 @@
     </style>
 </head>
 
-<body bgcolor="00FF00">
+<body style="background-color: green;">
     <form action="emprestimo.php" method="POST">
 
     <h1>SIMULADOR DE EMPRESTIMOS</h1>
@@ -60,8 +60,5 @@ if ($tipo == "decrescente"){
     }
     echo "TOTAIS: ";
 }
-
-
-
 
 ?>
