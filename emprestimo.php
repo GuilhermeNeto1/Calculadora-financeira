@@ -46,6 +46,7 @@ $data = $_POST['data'];
 $tipo = $_POST['tipo'];
 
 if ($tipo == "decrescente"){
+    //inicial:
     $amortizacao = ($valor / $parcelas);
     $saldo = $valor;
     $valorjuros = ($valor * ($juros/100));
@@ -54,11 +55,27 @@ if ($tipo == "decrescente"){
     for($i = 1;$i<=$parcelas;$i++){
         echo "Parcela: " . $i . " | Valor: R$" . number_format($valorparcela,2,',') . " | Amortização: R$" . number_format($amortizacao,2,',') . " | Juros: R$" . number_format($valorjuros,2,',') . " | Saldo devedor: R$" . number_format($saldo,2,',') . " |</br>";
         echo "_____________________________________________</br>";
-        $saldo = ($saldo - $amortizacao);
-        $valorjuros = ($saldo * ($juros/100));
-        $valorparcela = ($valorjuros + $amortizacao);
+        $saldo = $saldo - $amortizacao;
+        $valorjuros = $saldo * ($juros/100);
+        $valorparcela = $valorjuros + $amortizacao;
     }
     echo "TOTAIS: ";
+}
+
+else{
+    //inicial:
+    $saldo = $valor;
+    $valorjuros = ($valor * ($juros/100));
+    $valorparcela = $valor * ((($juros/100)*((($juros/100) + 1)**$parcelas))/((1 + ($juros/100))**$parcelas - 1));
+    $amortizacao = $valorparcela - $valorjuros;
+    
+    for($i = 1;$i<=$parcelas;$i++){
+        echo "Parcela: " . $i . " | Valor: R$" . number_format($valorparcela,2,',') . " | Amortização: R$" . number_format($amortizacao,2,',') . " | Juros: R$" . number_format($valorjuros,2,',') . " | Saldo devedor: R$" . number_format($saldo,2,',') . " |</br>";
+        echo "_____________________________________________</br>";
+        $saldo = $saldo - $amortizacao;
+        $valorjuros = $saldo * ($juros/100);
+        $amortizacao = $valorparcela - $valorjuros;
+    }
 }
 
 ?>
