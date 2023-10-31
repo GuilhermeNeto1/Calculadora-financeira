@@ -57,7 +57,7 @@
     <figure>
         <div class="column">
         <h2>Consórcio</h2>
-        <a href=""><img src="https://media.tenor.com/Bb8i51e3cukAAAAd/proton-loan-loan-pepe.gif" height="300" width="500"/></a>
+        <a href="consorcio.php"><img src="https://media.tenor.com/Bb8i51e3cukAAAAd/proton-loan-loan-pepe.gif" height="300" width="500"/></a>
         </div>
     </figure>
     </div>
