@@ -3,16 +3,27 @@
     <style>
         h2{
             font-size:20;
+            color:black;
         }
         legend{
             font-size:30;
         }
+        table{
+            font-size:30px;
+            text-align:center;
+        }
+            
+        
     </style>
 </head>
 
- <body style="background-color: green;">
+ <body style="background-color: silver;">
 
     <form action="consorcio.php" method="POST">
+
+        <figure>
+            <a href="testeprojeto.php"><h2>🠔 Voltar</h2></a>
+        </figure>
 
         <h1>SIMULADOR DE CONSÓRCIO</h1>
 
@@ -53,19 +64,21 @@ for($i = 0;$i<$anos;$i++){
     $valorfuturo = $valorfuturo + ($valorfuturo * 0.06);
 }
 
-echo "SIMULAÇÃO";
-echo "_________________________________________</br>";
-echo "Valor estimado da parcelas: R$ " . number_format($parcelas,2,',');
-echo "</br>_____________________________________________________</br>";
-echo "Montante em taxas: R$ " . $montantetaxas;
-echo "</br>_____________________________________________________</br>";
-echo "Valor da ultima parcela: R$ " . number_format($ultimaparcela,2,',');
-echo "</br>_____________________________________________________</br>";
-echo "Valor futuro do bem: R$ " . number_format($valorfuturo,2,',');
-echo "</br>_____________________________________________________</br>";
-
-
-
-
+echo 
+"<h2>SIMULAÇÃO</h2>
+<table border=4>
+    <tr>
+        <td>Valor estimado das parcelas</td>
+        <td>Montante em taxas</td>
+        <td>Valor da ultima parcela</td>
+        <td>Valor futuro do bem</td>
+    </tr>
+    <tr>
+        <td>R$ " . number_format($parcelas,2,',') . "</td>
+        <td>R$ " . $montantetaxas . "</td>
+        <td>R$ " . number_format($ultimaparcela,2,',') . "</td>
+        <td>R$ " . number_format($valorfuturo,2,',') . "</td>
+    </tr>
+</table>";
 
 ?>

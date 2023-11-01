@@ -4,21 +4,29 @@
     <style>
         h2{
             font-size:20;
+            color: black;
         }
         legend{
             font-size:30;
         }
+        table{
+            font-size:20px;
+        }
     </style>
 </head>
 
-<body style="background-color: green;">
+<body style="background-color: silver;">
     <form action="emprestimo.php" method="POST">
+
+    <figure>
+        <a href="testeprojeto.php"><h2>🠔 Voltar</h2></a>
+    </figure>
 
     <h1>SIMULADOR DE EMPRESTIMOS</h1>
     <fieldset>
     <legend>Parametros</legend>
     <h2>Valor do emprestimo:<input type="float" name="valor"/></h2></br></br>
-
+    
     <h2>Numero de parcelas:<input type="number" name="parcelas"/></h2></br></br>
 
     <h2>Tipo de parcelas:</h2>
@@ -32,7 +40,7 @@
     </fieldset>
     </br>
     <input type="submit" name="Enviar"/></br>
-    _____________________________________________
+    <h2>SIMULAÇÃO</h2>
     </form>
 </body>
 </html>
@@ -70,8 +78,18 @@ else{
     $amortizacao = $valorparcela - $valorjuros;
     
     for($i = 1;$i<=$parcelas;$i++){
-        echo "Parcela: " . $i . " | Valor: R$" . number_format($valorparcela,2,',') . " | Amortização: R$" . number_format($amortizacao,2,',') . " | Juros: R$" . number_format($valorjuros,2,',') . " | Saldo devedor: R$" . number_format($saldo,2,',') . " |</br>";
-        echo "_____________________________________________</br>";
+        #echo "Parcela: " . $i . " | Valor: R$" . number_format($valorparcela,2,',') . " | Amortização: R$" . number_format($amortizacao,2,',') . " | Juros: R$" . number_format($valorjuros,2,',') . " | Saldo devedor: R$" . number_format($saldo,2,',') . " |</br>";
+        #echo "_____________________________________________</br>";
+        echo 
+        "<table border=5>
+            <tr><td>Parcela: " . $i . "</td>
+                <td>Valor: R$ " . number_format($valorparcela,2,',') . "</td>
+                <td>Amortização: R$ " . number_format($amortizacao,2,',') . "</td>
+                <td>Juros: R$ " . number_format($valorjuros,2,',') . "</td>
+                <td>Saldo devedor: R$ " . number_format($saldo,2,',') . "</td>
+            </tr>
+        </table></br>";
+
         $saldo = $saldo - $amortizacao;
         $valorjuros = $saldo * ($juros/100);
         $amortizacao = $valorparcela - $valorjuros;
