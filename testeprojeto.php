@@ -66,8 +66,8 @@
     <div class="row">
     <figure>
         <div class="collum">
-        <h2>Impostos</h2>
-        <a href=""><img src="https://www.thebalancemoney.com/thmb/XPgnbNc-YCtZ0pXHZ3Xkty-FofQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1136346827-3eba69ab996a4abeb0836afe62abfd3c.jpg" height="300" width="500"/></a>
+        <h2>IPVA</h2>
+        <a href="ipva.php"><img src="https://www.thebalancemoney.com/thmb/XPgnbNc-YCtZ0pXHZ3Xkty-FofQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1136346827-3eba69ab996a4abeb0836afe62abfd3c.jpg" height="300" width="500"/></a>
         </div>
     </figure>
     <figure>

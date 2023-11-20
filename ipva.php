@@ -10,7 +10,7 @@
 <body>
 
     <form action="ipva.php" method="POST">
-        
+
         <figure>
             <a href="testeprojeto.php"><h2>🠔 Voltar</h2></a>
         </figure>
@@ -64,6 +64,8 @@
 </html>
 
 <?php
+if(isset($_POST['valor'])){
+
 $valor = $_POST['valor'];
 $tipo = $_POST['tipo'];
 $estado = $_POST['estado'];
@@ -617,5 +619,5 @@ switch ($estado) {
         }
         break;
 }
-
+}
 ?>

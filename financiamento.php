@@ -54,6 +54,7 @@
 </html>
 
 <?php
+if(isset($_POST['valor'])){
 
 $valor = $_POST['valor'];
 $entrada = $_POST['entrada'];
@@ -80,6 +81,6 @@ echo "
         <td>R$ " . $entrada . "</td>
     </tr>
 </table>";
-echo "</div>"
-
+echo "</div>";
+}
 ?>
