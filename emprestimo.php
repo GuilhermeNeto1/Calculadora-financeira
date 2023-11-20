@@ -40,18 +40,19 @@
     </fieldset>
     </br>
     <input type="submit" name="Enviar"/></br>
-    <h2>SIMULAÇÃO</h2>
     </form>
 </body>
 </html>
 
 <?php
-
+if(isset($_POST['valor'])){
 $valor = $_POST['valor'];
 $parcelas = $_POST['parcelas'];
 $juros = $_POST['juros'];
 $data = $_POST['data'];
 $tipo = $_POST['tipo'];
+
+echo "<h2>SIMULAÇÃO</h2>";
 
 if ($tipo == "decrescente"){
     //inicial:
@@ -95,5 +96,5 @@ else{
         $amortizacao = $valorparcela - $valorjuros;
     }
 }
-
+}
 ?>

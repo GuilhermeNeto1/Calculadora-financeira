@@ -7,8 +7,6 @@
     <style>
         body{
             background-color: red;
-
-
         }
         h1{
             font-family: Arial;
@@ -50,13 +48,13 @@
     <figure>
         <div class="column">
         <h2>financiamento veicular</h2>
-        <a href=""><img src="https://media1.giphy.com/media/9fTQAcZV9mKHAOmPC7/giphy.gif?cid=ecf05e4756x75wcgkr2ff4mqf128bxqnbg3rzb74gjo93tkf&ep=v1_gifs_search&rid=giphy.gif&ct=g" height="300" width="500"/></a>
+        <a href="financiamento.php"><img src="https://media1.giphy.com/media/9fTQAcZV9mKHAOmPC7/giphy.gif?cid=ecf05e4756x75wcgkr2ff4mqf128bxqnbg3rzb74gjo93tkf&ep=v1_gifs_search&rid=giphy.gif&ct=g" height="300" width="500"/></a>
         </div>
     </figure>
     <figure>
         <div class="column">
         <h2>Investimentos</h2>
-        <a href=""><img src="https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg?w=2000" height="300" width="500"/></a>
+        <a href="investimentos.php"><img src="https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg?w=2000" height="300" width="500"/></a>
         </div>
     </figure>
     <figure>
@@ -75,7 +73,7 @@
     <figure>
         <div class="collum">
         <h2>Conversor de moedas</h2>
-        <a href=""><img src="https://m.media-amazon.com/images/I/51f4CwHtzxL.png" height="300" width="500"/></a>
+        <a href="conversor.php"><img src="https://m.media-amazon.com/images/I/51f4CwHtzxL.png" height="300" width="500"/></a>
         </div>
     </figure>
     </div> 

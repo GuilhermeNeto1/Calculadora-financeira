@@ -44,6 +44,7 @@
 </html>
 
 <?php
+if(isset($_POST['valor'])){
 
 $valor = $_POST['valor'];
 $prestacoes = $_POST['prestacoes'];
@@ -80,5 +81,5 @@ echo
         <td>R$ " . number_format($valorfuturo,2,',') . "</td>
     </tr>
 </table>";
-
+}
 ?>

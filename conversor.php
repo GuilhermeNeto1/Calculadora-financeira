@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 
     <style>
-        body{
+        div{
             text-align:center;
             
         }
@@ -17,6 +17,13 @@
             font-size:25px;
             color: green;
         }
+        h3{
+            font-size:25px;
+            color: black;
+        }
+        fieldset{
+            border: solid 3px;
+        }
 
     </style>
 
@@ -25,7 +32,12 @@
 <body style="background-color: silver;">
 
     <form action="conversor.php" method="POST">
+    
+    <figure>
+            <a href="testeprojeto.php"><h3>🠔 Voltar</h3></a>
+    </figure>
 
+    <div>
     </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     <fieldset>
     <h1>CONVERSOR DE MOEDAS</h1>
@@ -55,16 +67,17 @@
         <option value="franco"><p>&#127464;&#127469</p> Franco Suíço (Fr)</option>
     </select></br>
     </fieldset>
-
-    <input type="submit" name="Enviar"/>
+        
+    <button>Converter</button>
     </form>
 
     
-
+    
 </body>
 </html>
 
 <?php
+if(isset($_POST['moeda1'])){
 $moeda1 = $_POST['moeda1'];
 $moeda2 = $_POST['moeda2'];
 
@@ -542,5 +555,6 @@ switch($moeda1){
     default:
         echo"erro";
 }
-
+echo "</div>";
+}
 ?>
